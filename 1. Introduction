@@ -1,0 +1,111 @@
+INTRODUCTION:
+A Database Management System (DBMS) is a software system that is designed to manage and organize data in a structured manner. It allows users to create, modify, and query a database, as well as manage the security and access controls for that database.
+
+* Some key features of a DBMS include:
+
+1. Data modeling: A DBMS provides tools for creating and modifying data models, which define the structure and relationships of the data in a database.
+2. Data storage and retrieval: A DBMS is responsible for storing and retrieving data from the database, and can provide various methods for searching and querying the data.
+3. Concurrency control: A DBMS provides mechanisms for controlling concurrent access to the database, to ensure that multiple users can access the data without conflicting with each other.
+4. Data integrity and security: A DBMS provides tools for enforcing data integrity and security constraints, such as constraints on the values of data and access controls that restrict who can access the data.
+5. Backup and recovery: A DBMS provides mechanisms for backing up and recovering the data in the event of a system failure.
+
+
+* DBMS can be classified into two types: Relational Database Management System (RDBMS) and Non-Relational Database Management System (NoSQL or Non-SQL)
+
+1. RDBMS: Data is organized in the form of tables and each table has a set of rows and columns. The data is related to each other through primary and foreign keys.
+2. NoSQL: Data is organized in the form of key-value pairs, document, graph, or column-based. These are designed to handle large-scale, high-performance scenarios.
+3. Database is a collection of interrelated data which helps in the efficient retrieval, insertion, and deletion of data from the database and organizes the data in the form of tables, views, schemas, reports, etc. For Example, a university database organizes the data about students, faculty, admin staff, etc. which helps in the efficient retrieval, insertion, and deletion of data from it.
+
+* There are four types of Data Languages
+
+1. Data Definition Language (DDL)
+2. Data Manipulation Language(DML)
+3. Data Control Language(DCL)
+4. Transactional Control Language(TCL)
+
+  -DDL is the short name for Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.
+
+  CREATE: to create a database and its objects like (table, index, views, store procedure, function, and triggers)
+  ALTER: alters the structure of the existing database
+  DROP: delete objects from the database
+  TRUNCATE: remove all records from a table, including all spaces allocated for the records are removed
+  COMMENT: add comments to the data dictionary
+  RENAME: rename an object
+  
+  -DML is the short name for Data Manipulation Language which deals with data manipulation and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE, etc., and it is used to store, modify, retrieve, delete and update data in a database.
+
+  SELECT: retrieve data from a database
+  INSERT: insert data into a table
+  UPDATE: updates existing data within a table
+  DELETE: Delete all records from a database table
+  MERGE: UPSERT operation (insert or update)
+  CALL: call a PL/SQL or Java subprogram
+  EXPLAIN PLAN: interpretation of the data access path
+  LOCK TABLE: concurrency Control
+  
+  -DCL is short for Data Control Language which acts as an access specifier to the database.(basically to grant and revoke permissions to users in the database
+
+  GRANT: grant permissions to the user for running DML(SELECT, INSERT, DELETE,…) commands on the table
+  REVOKE: revoke permissions to the user for running DML(SELECT, INSERT, DELETE,…) command on the specified table
+  
+  -TCL is short for Transactional Control Language which acts as an manager for all types of transactional data and all transactions.Some of the command of TCL are
+
+  Roll Back: Used to cancel  or Undo changes made in the database 
+  Commit: It is used to apply or save changes in the database
+  Save Point: It is used to save the data on the temporary basis in the database
+  
+* Database Management System: The software which is used to manage databases is called Database Management System (DBMS). For Example, MySQL, Oracle, etc. are popular commercial DBMS used in different applications. DBMS allows users the following tasks: 
+
+1. Data Definition: It helps in the creation, modification, and removal of definitions that define the organization of data in the database. 
+2. Data Updation: It helps in the insertion, modification, and deletion of the actual data in the database. 
+3. Data Retrieval: It helps in the retrieval of data from the database which can be used by applications for various purposes. 
+4. User Administration: It helps in registering and monitoring users, enforcing data security, monitoring performance, maintaining data integrity, dealing with concurrency control, and recovering information corrupted by unexpected failure.
+
+
+* Paradigm Shift from File System to DBMS
+
+ File System manages data using files on a hard disk. Users are allowed to create, delete, and update the files according to their requirements. Let us consider the example of file-based University Management System. Data of students is available to their respective Departments, Academics Section, Result Section, Accounts Section, Hostel Office, etc. Some of the data is common for all sections like Roll No, Name, Father Name, Address, and Phone number of students but some data is available to a particular section only like Hostel allotment number which is a part of the hostel office. Let us discuss the issues with this system:
+  -Redundancy of data: Data is said to be redundant if the same data is copied at many places. If a student wants to change their Phone number, he or she has to get it updated in various sections. Similarly, old records must be deleted from all sections representing that student.
+  -Inconsistency of Data: Data is said to be inconsistent if multiple copies of the same data do not match each other. If the Phone number is different in Accounts Section and Academics Section, it will be inconsistent. Inconsistency may be because of typing errors or not updating all copies of the same data.
+  -Difficult Data Access: A user should know the exact location of the file to access data, so the process is very cumbersome and tedious. If the user wants to search the student hostel allotment number of a student from 10000 unsorted students’ records, how difficult it can be.
+  -Unauthorized Access: File Systems may lead to unauthorized access to data. If a student gets access to a file having his marks, he can change it in an unauthorized way.
+  -No Concurrent Access: The access of the same data by multiple users at the same time is known as concurrency. The file system does not allow concurrency as data can be accessed by only one user at a time.
+  -No Backup and Recovery: The file system does not incorporate any backup and recovery of data if a file is lost or corrupted.
+  
+  
+* ADVANTAGES OR DISADVANTAGES:
+Advantages of using a DBMS:
+1. Data organization: A DBMS allows for the organization and storage of data in a structured manner, making it easy to retrieve and query the data as needed.
+2. Data integrity: A DBMS provides mechanisms for enforcing data integrity constraints, such as constraints on the values of data and access controls that restrict who can access the data.
+3. Concurrent access: A DBMS provides mechanisms for controlling concurrent access to the database, to ensure that multiple users can access the data without conflicting with each other.
+4. Data security: A DBMS provides tools for managing the security of the data, such as controlling access to the data and encrypting sensitive data.
+5. Backup and recovery: A DBMS provides mechanisms for backing up and recovering the data in the event of a system failure.
+6. Data sharing: A DBMS allows multiple users to access and share the same data, which can be useful in a collaborative work environment.
+7. Disadvantages of using a DBMS:
+8. Complexity: DBMS can be complex to set up and maintain, requiring specialized knowledge and skills.
+9. Performance overhead: The use of a DBMS can add overhead to the performance of an application, especially in cases where high levels of concurrency are required.
+10. Scalability: The use of a DBMS can limit the scalability of an application, since it requires the use of locking and other synchronization mechanisms to ensure data consistency.
+11. Cost: The cost of purchasing, maintaining and upgrading a DBMS can be high, especially for large or complex systems.
+12. Limited use cases: Not all use cases are suitable for a DBMS, some solutions don’t need high reliability, consistency or security and may be better served by other types of data storage.
+These are the main reasons which made a shift from file system to DBMS. Also, see
+
+A Database Management System (DBMS) is a software system that allows users to create, maintain, and manage databases. It is a collection of programs that enables users to access and manipulate data in a database. A DBMS is used to store, retrieve, and manipulate data in a way that provides security, privacy, and reliability.
+
+* Some of the key features of a DBMS include:
+1. Data Definition: A DBMS allows users to define the structure of the database, including the tables, fields, and relationships between tables.
+2. Data Manipulation: A DBMS allows users to insert, update, and delete data in the database, as well as retrieve data using queries.
+3. Data Security: A DBMS provides security features to prevent unauthorized access to the database and to protect the data from theft, loss, or corruption.
+4. Data Integrity: A DBMS provides mechanisms to maintain the accuracy and consistency of the data in the database, including enforcing constraints, such as unique keys, foreign keys, and check constraints.
+5. Data Backup and Recovery: A DBMS provides mechanisms to back up the data in the database and to recover data in case of data loss or corruption.
+
+* There are several types of DBMS, including:
+1. Relational DBMS (RDBMS): An RDBMS stores data in tables with rows and columns, and uses SQL (Structured Query Language) to manipulate the data.
+2. Object-Oriented DBMS (OODBMS): An OODBMS stores data as objects, which can be manipulated using object-oriented programming languages.
+3. NoSQL DBMS: A NoSQL DBMS stores data in non-relational data structures, such as key-value pairs, document-based models, or graph models.
+
+DBMS has many advantages, including:
+  -Improved data sharing: A DBMS allows multiple users to access and manipulate data in the database simultaneously.
+  -Reduced data redundancy: A DBMS eliminates data redundancy by storing data in a centralized database.
+  -Improved data consistency: A DBMS enforces constraints to ensure data consistency and accuracy.
+  -Improved data security: A DBMS provides security features to protect the data from unauthorized access and to prevent data loss or corruption.
+  -Improved data integrity: A DBMS enforces data integrity constraints to ensure that the data in the database is accurate and consistent.
