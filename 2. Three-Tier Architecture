@@ -1,0 +1,36 @@
+DBMS 3-tier Architecture
+
+DBMS 3-tier architecture divides the complete system into three inter-related but independent modules 
+
+1. Physical Level: At the physical level, the information about the location of database objects in the data store is kept. Various users of DBMS are unaware of the locations of these objects.In simple terms,physical level of a database describes how the data is being stored in secondary storage devices like disks and tapes and also gives insights on additional storage details.
+2. Conceptual Level: At conceptual level, data is represented in the form of various database tables. For Example, STUDENT database may contain STUDENT and COURSE tables which will be visible to users but users are unaware of their storage.Also referred as logical schema,it describes what kind of data is to be stored in the database.
+3. External Level:  An external level specifies a view of the data in terms of conceptual level tables.  Each external level view is used to cater to the needs of a particular category of users. For Example, FACULTY of a university is interested in looking course details of students, STUDENTS are interested in looking at all details related to academics, accounts, courses and hostel details as well. So, different views can be generated for different users. The main focus of external level is data abstraction.
+
+* Data Independence
+Data independence means a change of data at one level should not affect another level. Two types of data independence are present in this architecture:
+
+1. Physical Data Independence: Any change in the physical location of tables and indexes should not affect the conceptual level or external view of data. This data independence is easy to achieve and implemented by most of the DBMS.
+2. Conceptual Data Independence: The data at conceptual level schema and external level schema must be independent. This means a change in conceptual schema should not affect external schema. e.g.; Adding or deleting attributes of a table should not affect the user’s view of the table. But this type of independence is difficult to achieve as compared to physical data independence because the changes in conceptual schema are reflected in the user’s view.
+
+* Phases of database design
+Database designing for a real-world application starts from capturing the requirements to physical implementation using DBMS software which consists of following steps shown below: phases-of-db Conceptual Design: The requirements of database are captured using high level conceptual data model. For Example, the ER model is used for the conceptual design of the database. Logical Design: Logical Design represents data in the form of relational model. ER diagram produced in the conceptual design phase is used to convert the data into the Relational Model. Physical Design: In physical design, data in relational model is implemented using commercial DBMS like Oracle, DB2.
+
+* Advantages of DBMS
+DBMS helps in efficient organization of data in database which has following advantages over typical file system:
+  -Minimized redundancy and data inconsistency: Data is normalized in DBMS to minimize the redundancy which helps in keeping data consistent. For Example, student information can be kept at one place in DBMS and accessed by different users.This minimized redundancy is due to primary key and foreign keys
+  -Simplified Data Access: A user need only name of the relation not exact location to access data, so the process is very simple.
+  -Multiple data views: Different views of same data can be created to cater the needs of different users. For Example, faculty salary information can be hidden from student view of data but shown in admin view.
+  -Data Security: Only authorized users are allowed to access the data in DBMS. Also, data can be encrypted by DBMS which makes it secure.
+  -Concurrent access to data: Data can be accessed concurrently by different users at same time in DBMS.
+  -Backup and Recovery mechanism: DBMS backup and recovery mechanism helps to avoid data loss and data inconsistency in case of catastrophic failures.
+
+* In DBMS, the 3-tier architecture is a client-server architecture that separates the user interface, application processing, and data management into three distinct tiers or layers. The 3-tier architecture is widely used in modern web applications and enterprise systems because it offers scalability, flexibility, and security. Here is a brief description of each tier in the 3-tier architecture:
+
+  -Presentation Tier: The presentation tier is the user interface or client layer of the application. It is responsible for presenting data to the user and receiving input from the user. This tier can be a web browser, mobile app, or desktop application.
+  -Application Tier: The application tier is the middle layer of the 3-tier architecture. It is responsible for processing and managing the business logic of the application. This tier communicates with the presentation tier to receive user input and communicates with the data management tier to retrieve or store data. This tier may include application servers, web servers, or APIs.
+  -Data Management Tier: The data management tier is the bottom layer of the 3-tier architecture. It is responsible for managing and storing data. This tier can include databases, data warehouses, or data lakes. The data management tier communicates with the application tier to receive or store data.
+
+* The 3-tier architecture in DBMS provides several benefits, including:
+1. Scalability: The architecture separates the application processing and data management layers, which allows for easy scalability of each layer independently.
+2. Flexibility: The architecture allows for the replacement or upgrade of one layer without affecting the other layers.
+3. Security: The architecture provides an additional layer of security, as the data management tier can be isolated from the application and presentation tiers, reducing the risk of unauthorized access.
