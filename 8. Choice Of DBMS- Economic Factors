@@ -1,0 +1,24 @@
+Basically, the choice of a DBMS is governed by a number of factors such as: 
+ 1.Technical 
+ 2.Economics 
+ 3.Politics of Organization 
+ 
+Here we will basically discuss Non-technical factors which include the financial status and the support organization of the vendor. In this article, we will concentrate on discussing the economic and organizational factors that affect the choice of DBMS. Following costs are considered while choosing a DBMS these are as follows:  
+1. Software acquisition cost – 
+This is basically the up-front cost of software or buying cost of software including language options, and different types of interfaces. The correct DBMS version for a specific OS must be selected. Basically, the Development tools, design tools, and additional language support are not included in basic pricing. 
+ 
+2. Maintenance cost – 
+This is basically the recurring cost of receiving standard maintenance service from the vendor and keeping the DBMS version up-to-date. 
+ 
+3. Hardware acquisition cost – 
+We may need hardware components such as memory, disk drives, controllers, archival storage, etc cost of all these also we need to consider while choosing a DBMS. 
+ 
+4. Personal cost – 
+Acquisition of DBMS software for the first time by an organization is often accompanied by a reorganization of the data processing department. The position of DBA and staff exist in most companies that have adopted DBMS. 
+ 
+5. Training cost – 
+DBMS are often complex systems personnel must often be trained to use and program for DBMS. Training is required at all levels which include programming, application development, and database administration. 
+ 
+6. Operating cost – 
+The cost of operating the database also needs to be considered when choosing DBMS. 
+ 
